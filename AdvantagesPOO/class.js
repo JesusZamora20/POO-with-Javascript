@@ -1,35 +1,65 @@
+//------------------------------------ COURSES --------------------------------------------- 
+class Courses {
+    constructor({
+        name,
+        classes = [],
+
+    }){
+        this.name = name;
+        this.classes = classes;
+    }
+}
+
+const cursoProgBasica = new Courses ({
+    name: "Curso de programacion basica",
+});
+
+const cursoDefinitivoHTML = new Courses ({
+    name: "Curso definitivo de HTML y CSS",
+});
+
+const cursoPracticoHTML = new Courses ({
+    name: "Curso Practico de Html y CSS",
+});
+
+//--------------------------------- LEARNIGN PATHS -----------------------------------
 class LearningPath {
     constructor({
         pathName,
         courses = [],
-        teachers = [],
-        glosario = []
+
     }){
         this.pathName = pathName;
         this.courses = courses;
-        this.teachers = teachers;
-        this.glosario = glosario;
     }
 }
 
 const escuelaWeb = new LearningPath({
     pathName: "Escuela de desarrollo Web",
 
-    courses: ["Curso Basico de Javascript",
-    "Curso Basico de POO con Javascript",
-    "Curso de Webpack",
-    "Curso de manipulacion del DOM",
-    "Curso profesional de React Hooks"],
+    courses: [cursoDefinitivoHTML,
+    cursoPracticoHTML,
+    cursoProgBasica]
 
-    teachers: ["Freddy Vega",
-    "Ricardo Celis",
-    "Juan DC",
-    "Estefany Aguilar"],
-
-    glosario: ["HTML","Javascript",
-    "CSS","Servidor","Backend","Frontend"]
 });
 
+const escuelaVideojuegos = new LearningPath({
+    pathName: "Escuela de videojuegos",
+
+    courses: [cursoProgBasica,"Curso de Unity",
+    "Curso de Unreal Engine",],
+
+});
+
+const escuelaDeIngles = new LearningPath({
+    pathName: "English Academy",
+
+    courses: ["Curso A1: Miembros de la familia",
+    "Curso de ingles para Developers",],
+
+});
+
+//------------------------------------- STUDENTS -------------------------------------------
 class Student {
     constructor ({
         name, 
