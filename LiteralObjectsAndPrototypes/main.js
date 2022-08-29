@@ -7,8 +7,9 @@ const jesus = {
         "Curso practico html y css",
     ],
 
-    //create a method in a javascript object
     /*
+    create a method in a javascript object
+
     MethodName: function(){
 
     }
@@ -42,3 +43,4 @@ const david = new student(
     15,
     ["Curso basico de ingles", "curso de manejo de la ansiedad"],
 );
+
